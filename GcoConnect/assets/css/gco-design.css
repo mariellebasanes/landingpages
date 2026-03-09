@@ -113,6 +113,18 @@
   background-color: #f9d4e0 !important;
 }
 
+/* White buttons (.btn-light) hover state → coral pink */
+.btn.btn-light:hover {
+  background-color: #E76659 !important;
+  border-color: #E76659 !important;
+  color: #ffffff !important;
+}
+
+.btn.btn-light:hover i,
+.btn.btn-light:hover span {
+  color: #ffffff !important;
+}
+
 /* Danger / coral colour utilities */
 .text-danger {
   color: #E76659 !important;
@@ -338,9 +350,16 @@ details.accordion-item>summary::marker {
 
 
 /* 3. Rotate chevron when open (mirrors Bootstrap's transform on ::after) */
+.accordion-button::after {
+  transition: transform 0.3s ease-in-out !important;
+  transform: rotate(-180deg) !important;
+  /* Pointing UP by default */
+}
+
 details[open]>summary.accordion-button::after {
   background-image: var(--bs-accordion-btn-active-icon);
-  transform: var(--bs-accordion-btn-icon-transform);
+  transform: rotate(0deg) !important;
+  /* Rotate to point DOWN when open */
 }
 
 /* ── Allow GCO sections to bleed full page width ─────────────────────────── */

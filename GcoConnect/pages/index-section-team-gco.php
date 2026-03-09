@@ -5,26 +5,55 @@ $photoBase = isset($GCO_BASE)
 $logoBase = isset($GCO_BASE)
   ? $GCO_BASE . 'assets/img/programs-logo'
   : 'assets/img/programs-logo';
-$director = [
-  'name' => 'Marietta M. Bengat', 
-  'role' => 'DIRECTOR', 
-  'email' => 'mmbengat@feutech.edu.ph', 
-  'photo' => '../../team/team-blank.jpg'
-];
 
-$counselors = [
-  ['name' => 'Rochile G. Borje', 'role' => 'GUIDANCE COUNSELOR', 'email' => 'rgborje@feutech.edu.ph', 'programs' => ['BSCE', 'BSCEM', 'BSCPE', 'BSECE'], 'photo' => 'borje.png'],
-  ['name' => 'Vilma R. Colinco', 'role' => 'GUIDANCE COUNSELOR', 'email' => 'vrcolinco@feutech.edu.ph', 'programs' => ['BSITSMBA', 'BSCYBER', 'BSMFGE', 'BSCE'], 'photo' => 'Colinco.png'],
-  ['name' => 'Charlene Marie A. Arabejo', 'role' => 'GUIDANCE COUNSELOR', 'email' => 'caarabejo@feutech.edu.ph', 'programs' => ['BSITSMBA', 'BSCYBER'], 'photo' => 'Arabejo.png'],
-  ['name' => 'Paula Trisha D. Balcera', 'role' => 'GUIDANCE COUNSELOR', 'email' => 'pdbalcera@feutech.edu.ph', 'programs' => ['BSITWMA', 'BSITAGD'], 'photo' => 'balcera.png'],
-];
-
-$psychometrician = [
-  'name' => 'Moira Ashley C. Roy', 
-  'role' => 'PSYCHOMETRICIAN', 
-  'email' => 'mcroy@feutech.edu.ph', 
-  'programs' => ['BSMFGE', 'BSCE', 'BSITWMA', 'BSITAGD'], 
-  'photo' => 'roy.png'
+$all_team = [
+  [
+    'name' => 'Marietta M. Bengat', 
+    'role' => 'DIRECTOR', 
+    'email' => 'mmbengat@feutech.edu.ph', 
+    'photo' => '../../team/team-blank.jpg',
+    'contactText' => 'Contact Director'
+  ],
+  [
+    'name' => 'Rochile G. Borje', 
+    'role' => 'GUIDANCE COUNSELOR', 
+    'email' => 'rgborje@feutech.edu.ph', 
+    'programs' => ['BSCE', 'BSCEM', 'BSCPE', 'BSECE'], 
+    'photo' => 'borje.png',
+    'contactText' => 'Contact Counselor'
+  ],
+  [
+    'name' => 'Vilma R. Colinco', 
+    'role' => 'GUIDANCE COUNSELOR', 
+    'email' => 'vrcolinco@feutech.edu.ph', 
+    'programs' => ['BSITSMBA', 'BSCYBER', 'BSMFGE', 'BSCE'], 
+    'photo' => 'Colinco.png',
+    'contactText' => 'Contact Counselor'
+  ],
+  [
+    'name' => 'Charlene Marie A. Arabejo', 
+    'role' => 'GUIDANCE COUNSELOR', 
+    'email' => 'caarabejo@feutech.edu.ph', 
+    'programs' => ['BSITSMBA', 'BSCYBER'], 
+    'photo' => 'Arabejo.png',
+    'contactText' => 'Contact Counselor'
+  ],
+  [
+    'name' => 'Paula Trisha D. Balcera', 
+    'role' => 'GUIDANCE COUNSELOR', 
+    'email' => 'pdbalcera@feutech.edu.ph', 
+    'programs' => ['BSITWMA', 'BSITAGD'], 
+    'photo' => 'balcera.png',
+    'contactText' => 'Contact Counselor'
+  ],
+  [
+    'name' => 'Moira Ashley C. Roy', 
+    'role' => 'PSYCHOMETRICIAN', 
+    'email' => 'mcroy@feutech.edu.ph', 
+    'programs' => ['BSMFGE', 'BSCE', 'BSITWMA', 'BSITAGD'], 
+    'photo' => 'roy.png',
+    'contactText' => 'Contact Psychometrician'
+  ]
 ];
 ?>
 <section class="bg-light py-20 overflow-hidden position-relative" style="z-index: 0;">
@@ -56,78 +85,57 @@ $psychometrician = [
       <p class="text-gray-600 fs-5 mw-500px mx-auto">Meet our professional team ready to support your wellness journey</p>
     </div>
 
-    <!-- DIRECTOR AREA -->
-    <div class="mb-20 text-center">
-      <h3 class="fw-bold fs-1 mb-8 text-primary">Director</h3>
-      <div class="d-flex justify-content-center">
-        <div class="card card-bordered overflow-hidden" style="max-width: 300px;">
-          <div class="ratio ratio-1x1 overflow-hidden">
-            <img src="<?= htmlspecialchars($photoBase . '/' . $director['photo'])?>" alt="<?= htmlspecialchars($director['name'])?>"
-              class="object-fit-cover w-100 h-100 position-absolute top-0 start-0 hover-scale">
-          </div>
-          <div class="card-body p-6 d-flex flex-column text-start">
-            <span class="badge badge-light-primary fs-9 text-uppercase ls-1 mb-3 align-self-start">
-              <?= htmlspecialchars($director['role'])?>
-            </span>
-            <h3 class="fw-bold fs-3 mb-1 text-gray-800">
-              <?= htmlspecialchars($director['name'])?>
-            </h3>
-            <a href="mailto:<?= htmlspecialchars($director['email'])?>"
-              class="text-gray-600 fs-7 d-block mb-4">
-              <?= htmlspecialchars($director['email'])?>
-            </a>
-            <div class="separator mb-4"></div>
-            <div class="mt-auto">
-              <a href="mailto:<?= htmlspecialchars($director['email'])?>"
-                class="btn btn-primary btn-sm fw-semibold w-100 hover-elevate-up">
-                <i class="ki-duotone ki-messages fs-6 me-1"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span></i>
-                Contact Director
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- GUIDANCE COUNSELOR AREA -->
+    <!-- TEAM CAROUSEL AREA -->
     <div class="mb-20">
-      <div class="text-center mb-10">
-        <h3 class="fw-bold fs-1 mb-4 text-primary">Guidance Counselors</h3>
-      </div>
-      <div class="swiper my-5 pb-10" id="teamSwiper">
+      <div class="swiper my-5 pb-10 px-5" id="allTeamSwiper">
         <div class="swiper-wrapper">
-          <?php foreach ($counselors as $m): ?>
-          <div class="swiper-slide h-auto">
-            <div class="card card-bordered overflow-hidden h-100 mx-auto" style="max-width: 260px;">
-              <div class="ratio ratio-1x1 overflow-hidden">
+          <?php foreach ($all_team as $m): ?>
+          <div class="swiper-slide h-auto py-5">
+            <div class="card card-bordered overflow-hidden h-100 mx-auto transition-all duration-300 hover-elevate-up shadow-sm border-0 bg-white" style="max-width: 300px; border-radius: 1rem;">
+              <div class="ratio ratio-1x1 overflow-hidden bg-light position-relative">
                 <img src="<?= htmlspecialchars($photoBase . '/' . $m['photo'])?>" alt="<?= htmlspecialchars($m['name'])?>"
-                  class="object-fit-cover w-100 h-100 position-absolute top-0 start-0 hover-scale">
+                  class="object-fit-cover w-100 h-100 position-absolute top-0 start-0 hover-scale" onerror="this.src='../../team/team-blank.jpg'">
               </div>
-              <div class="card-body p-5 p-lg-6 d-flex flex-column">
-                <span class="badge badge-light-primary fs-9 text-uppercase ls-1 mb-3 align-self-start">
+              <div class="card-body p-6 d-flex flex-column text-start">
+                <span class="badge badge-light-primary fs-9 text-uppercase ls-1 mb-4 border border-primary border-opacity-25 align-self-start fw-bold px-3 py-2">
                   <?= htmlspecialchars($m['role'])?>
                 </span>
-                <h3 class="fw-bold fs-4 mb-1 text-gray-800">
+                <h3 class="fw-bold fs-3 mb-1 text-gray-900">
                   <?= htmlspecialchars($m['name'])?>
                 </h3>
                 <a href="mailto:<?= htmlspecialchars($m['email'])?>"
-                  class="text-gray-600 fs-7 d-block mb-4 text-truncate">
+                  class="text-gray-500 fs-7 d-block mb-5 text-truncate hover-primary transition-all text-decoration-none">
+                  <i class="ki-duotone ki-sms fs-6 me-1"><span class="path1"></span><span class="path2"></span></i>
                   <?= htmlspecialchars($m['email'])?>
                 </a>
-                <div class="separator mb-4"></div>
-                <div class="text-gray-500 fs-9 fw-normal text-uppercase ls-1 mb-3">Assigned Programs</div>
+                
+                <?php if (isset($m['programs']) && !empty($m['programs'])): ?>
+                <div class="border-top border-gray-200 mb-4 opacity-50"></div>
+                <div class="text-gray-400 fs-9 fw-bold text-uppercase ls-2 mb-3">Assigned Programs</div>
                 <div class="d-flex flex-wrap gap-2 mb-4">
                   <?php foreach ($m['programs'] as $p): ?>
-                  <span class="badge badge-light fs-9 fw-semibold d-flex align-items-center gap-2">
+                  <span class="badge badge-light bg-gray-100 text-gray-700 fs-8 fw-semibold d-flex align-items-center gap-2 px-3 py-2 rounded-pill shadow-sm border border-gray-200">
                     <img src="<?= htmlspecialchars($logoBase . '/' . $p . '.png')?>" alt="<?= htmlspecialchars($p)?>" class="w-15px h-15px">
                     <?= htmlspecialchars($p)?>
                   </span>
                   <?php endforeach; ?>
                 </div>
-                <div class="mt-auto">
+                <?php else: ?>
+                <div class="border-top border-gray-200 mb-4 opacity-50"></div>
+                <div class="flex-grow-1 mb-4 d-flex align-items-center text-gray-500 fs-6 fst-italic">
+                  "Leading the GCO team with vision and dedication to student wellness."
+                </div>
+                <?php endif; ?>
+                
+                <div class="mt-auto pt-4 border-top border-gray-200">
                   <a href="mailto:<?= htmlspecialchars($m['email'])?>"
-                    class="btn btn-light-primary btn-sm fw-semibold w-100 hover-elevate-up">
-                    Contact Counselor
+                    class="btn <?= $m['role'] === 'DIRECTOR' ? 'btn-primary' : 'btn-light-primary' ?> btn-sm fw-bold w-100 rounded-pill hover-elevate-up transition-all py-3">
+                    <?php if ($m['role'] === 'DIRECTOR'): ?>
+                      <i class="ki-duotone ki-messages fs-5 me-2"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span></i>
+                    <?php else: ?>
+                      <i class="ki-duotone ki-flask fs-5 me-2"><span class="path1"></span><span class="path2"></span></i>
+                    <?php endif; ?>
+                    <?= htmlspecialchars($m['contactText'])?>
                   </a>
                 </div>
               </div>
@@ -135,81 +143,70 @@ $psychometrician = [
           </div>
           <?php endforeach; ?>
         </div>
-        <div class="swiper-pagination mt-8 position-relative"></div>
-      </div>
-    </div>
-
-    <!-- PSYCHOMETRICIAN AREA -->
-    <div class="text-center">
-      <h3 class="fw-bold fs-1 mb-8 text-primary">Psychometrician</h3>
-      <div class="d-flex justify-content-center">
-        <div class="card card-bordered overflow-hidden" style="max-width: 280px;">
-          <div class="ratio ratio-1x1 overflow-hidden">
-            <img src="<?= htmlspecialchars($photoBase . '/' . $psychometrician['photo'])?>" alt="<?= htmlspecialchars($psychometrician['name'])?>"
-              class="object-fit-cover w-100 h-100 position-absolute top-0 start-0 hover-scale">
-          </div>
-          <div class="card-body p-6 d-flex flex-column text-start">
-            <span class="badge badge-light-primary fs-9 text-uppercase ls-1 mb-3 align-self-start">
-              <?= htmlspecialchars($psychometrician['role'])?>
-            </span>
-            <h3 class="fw-bold fs-4 mb-1 text-gray-800">
-              <?= htmlspecialchars($psychometrician['name'])?>
-            </h3>
-            <a href="mailto:<?= htmlspecialchars($psychometrician['email'])?>"
-              class="text-gray-600 fs-7 d-block mb-4">
-              <?= htmlspecialchars($psychometrician['email'])?>
-            </a>
-            <div class="separator mb-4"></div>
-            <div class="text-gray-500 fs-9 fw-normal text-uppercase ls-1 mb-3">Assigned Programs</div>
-            <div class="d-flex flex-wrap gap-2 mb-4">
-              <?php foreach ($psychometrician['programs'] as $p): ?>
-              <span class="badge badge-light fs-9 fw-semibold d-flex align-items-center gap-2">
-                <img src="<?= htmlspecialchars($logoBase . '/' . $p . '.png')?>" alt="<?= htmlspecialchars($p)?>" class="w-15px h-15px">
-                <?= htmlspecialchars($p)?>
-              </span>
-              <?php endforeach; ?>
-            </div>
-            <div class="mt-auto">
-              <a href="mailto:<?= htmlspecialchars($psychometrician['email'])?>"
-                class="btn btn-light-primary btn-sm fw-semibold w-100 hover-elevate-up">
-                Contact Psychometrician
-              </a>
-            </div>
-          </div>
-        </div>
+        <div class="swiper-pagination mt-10 position-relative"></div>
       </div>
     </div>
 
     <script>
       document.addEventListener('DOMContentLoaded', function () {
         if (typeof Swiper !== 'undefined') {
-          new Swiper('#teamSwiper', {
-            slidesPerView: 1, spaceBetween: 20, loop: true,
-            autoplay: { delay: 3000, disableOnInteraction: false },
-            pagination: { el: '.swiper-pagination', clickable: true },
-            breakpoints: { 640: { slidesPerView: 2, spaceBetween: 20 }, 1024: { slidesPerView: 4, spaceBetween: 20 } }
+          new Swiper('#allTeamSwiper', {
+            slidesPerView: 1, 
+            spaceBetween: 20, 
+            loop: false,
+            grabCursor: true,
+            autoplay: { delay: 3500, disableOnInteraction: false, pauseOnMouseEnter: true },
+            pagination: { el: '.swiper-pagination', clickable: true, dynamicBullets: true },
+            breakpoints: { 
+              640: { slidesPerView: 2, spaceBetween: 20 }, 
+              992: { slidesPerView: 3, spaceBetween: 25 },
+              1200: { slidesPerView: 4, spaceBetween: 30 }
+            }
           });
         }
       });
     </script>
     <style>
       .hover-scale {
-        transition: transform .3s ease;
+        transition: transform .5s cubic-bezier(0.25, 1, 0.5, 1);
       }
 
       .card:hover .hover-scale {
-        transform: scale(1.05);
+        transform: scale(1.1);
       }
 
-      #teamSwiper .swiper-pagination-bullet {
+      #allTeamSwiper {
+        padding-bottom: 3.5rem !important;
+        padding-top: 1rem !important;
+      }
+
+      #allTeamSwiper .swiper-pagination-bullet {
         background-color: var(--bs-primary);
-        opacity: .5;
+        opacity: .3;
+        transition: all 0.3s ease;
+        width: 10px;
+        height: 10px;
       }
 
-      #teamSwiper .swiper-pagination-bullet-active {
+      #allTeamSwiper .swiper-pagination-bullet-active {
         opacity: 1;
-        width: 24px;
+        width: 32px;
         border-radius: 8px;
+        background-color: var(--bs-primary);
+      }
+      
+      .hover-primary:hover {
+        color: var(--bs-primary) !important;
+      }
+      
+      .hover-elevate-up {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      
+      .card.hover-elevate-up:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.08) !important;
+        z-index: 10;
       }
     </style>
 
