@@ -1,2 +1,11 @@
 .DS_Store
 *.log
+php
+*.zip
+node_modules/
+vendor/
+.gemini/
+.agents/
+**/assets/img/
+!**/assets/img/logo.png
+!networkmap/assets/img/hero_nm.png
