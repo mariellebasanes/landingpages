@@ -12,7 +12,7 @@
           Don't leave your graduation to chance. Join 1,000+ students already using NetworkMap to visualize and master their degree requirements.
         </p>
         <div class="d-flex flex-center gap-5">
-          <a href="#" class="btn btn-nm-primary shadow-lg fs-2 px-15 py-5">Register for Free</a>
+          <a href="#" class="btn btn-nm-white shadow-lg fs-2 px-15 py-5">Register for Free</a>
         </div>
         <p class="mt-8 text-white opacity-50 fs-6">No credit card required. Educational use only.</p>
       </div>

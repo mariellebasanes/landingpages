@@ -30,6 +30,7 @@ $META_TITLE = "Welcome to Edith";
                 <?php
                 include(__DIR__ . "/pages/hero.php");
                 include(__DIR__ . "/pages/features.php");
+                include(__DIR__ . "/pages/curriculum-preview.php");
                 include(__DIR__ . "/pages/how-it-works.php");
                 include(__DIR__ . "/pages/cta.php");
                 ?>
