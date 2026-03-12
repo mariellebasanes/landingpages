@@ -16,7 +16,7 @@ $META_TITLE = "Welcome to Edith";
   <link rel="stylesheet" href="/networkmap/assets/css/networkmap-design.css?v=<?php echo time(); ?>">
 </head>
 
-<body id="kt_app_body" data-kt-app-page-loading-enabled="true" data-kt-app-page-loading="on"
+<body id="kt_app_body" data-kt-app-page-loading-enabled="true"
   data-kt-app-layout="light-header" class="app-default">
   <?php include("partials/_page-loader.php"); ?>
   <div class="d-flex flex-column flex-root app-root" id="kt_app_root">
@@ -44,17 +44,30 @@ $META_TITLE = "Welcome to Edith";
   <?php include("partials/_scrolltop.php"); ?>
 
   <script>
-    // Fallback to remove loading screen if Metronic scripts fail
-    window.addEventListener('load', function() {
-      setTimeout(function() {
-        document.body.removeAttribute('data-kt-app-page-loading');
-        document.body.removeAttribute('data-kt-app-page-loading-enabled');
-        var loader = document.querySelector('.page-loader');
-        if (loader) {
+    // Force remove loading screen
+    function removeLoader() {
+      document.body.removeAttribute('data-kt-app-page-loading');
+      document.body.removeAttribute('data-kt-app-page-loading-enabled');
+      var loader = document.querySelector('.page-loader');
+      if (loader) {
+        loader.style.opacity = '0';
+        setTimeout(function() {
           loader.style.display = 'none';
-        }
-      }, 3000); // 3 second fallback
+        }, 500);
+      }
+    }
+
+    // Attempt to remove it via multiple triggers
+    window.addEventListener('DOMContentLoaded', function() {
+      setTimeout(removeLoader, 1500); // Quick attempt
     });
+    
+    window.addEventListener('load', function() {
+      removeLoader(); // Final attempt
+    });
+
+    // Safeguard timeout
+    setTimeout(removeLoader, 5000);
   </script>
 </body>
 

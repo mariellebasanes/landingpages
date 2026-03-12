@@ -8,41 +8,57 @@
       </p>
     </div>
     
-    <div class="row">
-      <div class="col-lg-4 mb-10 mb-lg-0">
-        <div class="d-flex align-items-center mb-5">
-          <div class="symbol symbol-50px symbol-circle me-5">
-            <span class="symbol-label bg-primary text-white fw-bold fs-4">1</span>
-          </div>
-          <h3 class="fs-2 mb-0">Import Your Data</h3>
-        </div>
-        <p class="fs-5 text-gray-700 ps-15">
-          Connect your student portal or upload your digital transcript. We'll parse your credits instantly.
-        </p>
-      </div>
+    <div class="process-wrapper">
+      <div class="process-line"></div>
       
-      <div class="col-lg-4 mb-10 mb-lg-0">
-        <div class="d-flex align-items-center mb-5">
-          <div class="symbol symbol-50px symbol-circle me-5">
-            <span class="symbol-label bg-primary text-white fw-bold fs-4">2</span>
+      <div class="row g-10">
+        <!-- Step 1 -->
+        <div class="col-lg-4">
+          <div class="step-card">
+            <div class="step-icon-container bg-light-primary">
+              <i class="ki-duotone ki-file-up fs-2tx text-primary">
+                <span class="path1"></span><span class="path2"></span>
+              </i>
+              <div class="step-number-badge">1</div>
+            </div>
+            <h3 class="step-title">Import Your Data</h3>
+            <p class="step-description">
+              Connect your student portal or upload your digital transcript. We'll parse your credits instantly.
+            </p>
           </div>
-          <h3 class="fs-2 mb-0">Explore Your Path</h3>
         </div>
-        <p class="fs-5 text-gray-700 ps-15">
-          Interact with your personalized degree map. See prerequisites, corequisites, and future course paths.
-        </p>
-      </div>
-      
-      <div class="col-lg-4">
-        <div class="d-flex align-items-center mb-5">
-          <div class="symbol symbol-50px symbol-circle me-5">
-            <span class="symbol-label bg-primary text-white fw-bold fs-4">3</span>
+        
+        <!-- Step 2 -->
+        <div class="col-lg-4">
+          <div class="step-card">
+            <div class="step-icon-container bg-light-info">
+              <i class="ki-duotone ki-map fs-2tx text-info">
+                <span class="path1"></span><span class="path2"></span><span class="path3"></span>
+              </i>
+              <div class="step-number-badge">2</div>
+            </div>
+            <h3 class="step-title">Explore Your Path</h3>
+            <p class="step-description">
+              Interact with your personalized degree map. See prerequisites, corequisites, and future course paths.
+            </p>
           </div>
-          <h3 class="fs-2 mb-0">Stay on Track</h3>
         </div>
-        <p class="fs-5 text-gray-700 ps-15">
-          Get alerts for critical courses, track your GPA goals, and plan every semester until graduation.
-        </p>
+        
+        <!-- Step 3 -->
+        <div class="col-lg-4">
+          <div class="step-card">
+            <div class="step-icon-container bg-light-success">
+              <i class="ki-duotone ki-notification-status fs-2tx text-success">
+                <span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span>
+              </i>
+              <div class="step-number-badge">3</div>
+            </div>
+            <h3 class="step-title">Stay on Track</h3>
+            <p class="step-description">
+              Get alerts for critical courses, track your GPA goals, and plan every semester until graduation.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
